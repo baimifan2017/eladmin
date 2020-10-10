@@ -24,7 +24,7 @@ import java.io.Serializable;
  * @date 2018-12-20
  */
 @Data
-@AllArgsConstructor
+@AllArgsConstructor // 全参构造函数
 public class MenuMetaVo implements Serializable {
 
     private String title;

@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>eladmin-system</artifactId>
+    <packaging>pom</packaging>
     <name>核心模块</name>
+    <modules>
+        <module>src/main/java/me/zhengjie/modules/basic</module>
+    </modules>
 
     <properties>
         <jjwt.version>0.11.1</jjwt.version>
@@ -19,6 +23,20 @@
     </properties>
 
     <dependencies>
+
+        <!-- basic数据管理模块 -->
+        <dependency>
+            <groupId>me.zhengjie</groupId>
+            <artifactId>basic</artifactId>
+            <version>2.6</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>me.zhengjie</groupId>
+                    <artifactId>pm-basic</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- 代码生成模块 -->
         <dependency>
             <groupId>me.zhengjie</groupId>
