@@ -25,16 +25,6 @@ import org.mapstruct.ReportingPolicy;
  * @author Zheng Jie
  * @date 2019-5-22
  */
-
-/*
-       unmappedTargetPolicy
-       在映射方法的目标对象的属性未填充源值的情况下应用的默认报告策略，支持的值 :
-
-        1> ERROR : 任何未映射的目标属性都将导致映射代码生成失败
-
-        2> WARN : 任何未映射的目标属性将在构建时引发警告
-
-        3> IGNORE : 未映射的目标属性被忽略*/
 @Mapper(componentModel = "spring",unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface LogErrorMapper extends BaseMapper<LogErrorDTO, Log> {
 
