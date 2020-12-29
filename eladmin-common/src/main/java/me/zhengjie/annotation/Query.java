@@ -24,12 +24,16 @@ import java.lang.annotation.Target;
  * @author Zheng Jie
  * @date 2019-6-4 13:52:30
  */
+
+
+
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Query {
 
     // Dong ZhaoYang 2017/8/7 基本对象的属性名
     String propName() default "";
+
     // Dong ZhaoYang 2017/8/7 查询方式
     Type type() default Type.EQUAL;
 
@@ -66,13 +70,13 @@ public @interface Query {
         // jie 2019/6/4 包含
         , IN
         // 不等于
-        ,NOT_EQUAL
+        , NOT_EQUAL
         // between
-        ,BETWEEN
+        , BETWEEN
         // 不为空
-        ,NOT_NULL
+        , NOT_NULL
         // 为空
-        ,IS_NULL
+        , IS_NULL
     }
 
     /**
@@ -80,7 +84,9 @@ public @interface Query {
      * 适用于简单连接查询，复杂的请自定义该注解，或者使用sql查询
      */
     enum Join {
-        /** jie 2019-6-4 13:18:30 */
+        /**
+         * jie 2019-6-4 13:18:30
+         */
         LEFT, RIGHT, INNER
     }
 

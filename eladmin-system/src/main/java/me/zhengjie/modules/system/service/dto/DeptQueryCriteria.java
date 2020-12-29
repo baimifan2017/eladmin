@@ -18,16 +18,24 @@ package me.zhengjie.modules.system.service.dto;
 import lombok.Data;
 import me.zhengjie.annotation.DataPermission;
 import me.zhengjie.annotation.Query;
+
 import java.sql.Timestamp;
 import java.util.List;
 
 /**
-* @author Zheng Jie
-* @date 2019-03-25
-*/
+ * @author Zheng Jie
+ * @date 2019-03-25
+ */
+
+
+/**
+ * @Data注解 与 lombok
+ * @Data 注解的主要作用是提高代码的简洁，使用这个注解可以省去代码中大量的get()、 set()、 toString()等方法；
+ */
+
 @Data
 @DataPermission(fieldName = "id")
-public class DeptQueryCriteria{
+public class DeptQueryCriteria {
 
     @Query(type = Query.Type.INNER_LIKE)
     private String name;

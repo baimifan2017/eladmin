@@ -40,6 +40,9 @@ import java.util.*;
 * @date 2019-03-25
 */
 @RestController
+/*
+* 写在类上可以代替@AutoWired注解，需要注意的是在注入时需要用final定义，或者使用@notnull注解
+* */
 @RequiredArgsConstructor
 @Api(tags = "系统：部门管理")
 @RequestMapping("/api/dept")

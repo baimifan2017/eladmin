@@ -86,6 +86,16 @@
             <artifactId>oshi-core</artifactId>
             <version>5.0.1</version>
         </dependency>
+
+
+
+
+        <!-- 物资管理系统 -->
+        <dependency>
+            <groupId>me.zhengjie</groupId>
+            <artifactId>eladmin-material</artifactId>
+            <version>2.6</version>
+        </dependency>
     </dependencies>
 
     <!-- 打包 -->
